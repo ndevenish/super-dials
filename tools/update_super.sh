@@ -49,6 +49,9 @@ if [[ -n "$to_update" ]]; then
 
   echo "${BOLD}Update message:${NC}"
   echo $message
+
+  command="git commit -am \"$message\""
+  echo "Running '$command'"
 else
   printf "\nNothing to do.\n"
 fi
