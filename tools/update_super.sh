@@ -23,10 +23,12 @@ title() {
 }
 
 title "Fetching updates"
-for_each "Updating" git fetch
+git submodule update --remote
 
-title "Matching remote master branch"
-for_each "Resetting" git reset --hard origin/master
+# for_each "Updating" git fetch
+
+# title "Matching remote master branch"
+# for_each "Resetting" git reset --hard origin/master
 
 title "Updating super-repository"
 
