@@ -30,7 +30,7 @@ for_each "Resetting" git reset --hard origin/master
 
 title "Updating super-repository"
 
-to_update=$(git status --porcelain | awk '{ print $2; }')
+to_update=$(git status --untracked-files=no --porcelain | awk '{ print $2; }')
 update_count=$(echo "$to_update" | wc -l)
 
 # Do we have any updates?
