@@ -53,6 +53,7 @@ if [[ -n "$to_update" ]]; then
 
   command="git commit -am \"$message\""
   echo "Running '$command'"
+  git commit -am "$message"
 else
   printf "\nNothing to do.\n"
 fi
