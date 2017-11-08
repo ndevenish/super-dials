@@ -34,6 +34,7 @@ title "Updating super-repository"
 
 to_update=$(git status --untracked-files=no --porcelain | awk '{ print $2; }')
 update_count=$(echo "$to_update" | wc -l)
+update_count="$(echo -e "${update_count}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 
 # Do we have any updates?
 if [[ -n "$to_update" ]]; then
