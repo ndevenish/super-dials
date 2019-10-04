@@ -28,3 +28,6 @@
 [submodule "xia2"]
 	path = xia2
 	url = https://github.com/xia2/xia2.git
+[submodule "dxtbx"]
+	path = dxtbx
+	url = https://github.com/dials/dxtbx.git
